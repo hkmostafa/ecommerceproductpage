@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Kumbh Black';
+    src: url('./assets/fonts/KumbhSans-Black.woff2') format('woff2'),
+        url('./assets/fonts/KumbhSans-Black.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kumbh Regular';
+    src: url('./assets/fonts/KumbhSans-Regular.woff2') format('woff2'),
+        url('./assets/fonts/KumbhSans-Regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kumbh Bold';
+    src: url('./assets/fonts/KumbhSans-Bold.woff2') format('woff2'),
+        url('./assets/fonts/KumbhSans-Bold.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+//Colors 
+$primaryOrange : hsl(26, 100%, 55%);
+$secondaryOrange : hsl(25, 100%, 94%);
+$darkBlue : hsl(220, 13%, 13%);
+$darkGrayishBlue : hsl(219, 9%, 45%);
+$grayishBlue: hsl(220, 14%, 75%);
+$lightGrayishBlue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black : hsl(0, 0%, 0%);
+
+//Font
+
+
+.App{
+    padding-bottom : 3rem;
+}
+.navBar{
+    display: flex;
+    flex-direction: row;
+    padding-block : 1.5rem;
+    padding-inline: 1.5rem;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navBar> * {
+    display : flex;
+    flex-direction: row;
+    gap : 1rem;
+    flex-wrap : wrap;
+    align-content: center;
+}
+.icon-menu{
+    height: 1rem;
+    align-self: flex-end;
+}
+.logo{
+    height: 1.2rem;
+}
+.icon-cart{
+    height: 1.3rem;
+    align-self: center;
+
+}
+.avatar{
+    height: 2rem;
+}
+.container{
+    display: grid;
+    gap : 1.7rem;
+}
+
+.product-image{
+    background-image: url('images/image-product-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block:  40%;
+}
+
+.arrows{
+    display : flex;
+    justify-content: space-between;
+    padding-inline : 3%;
+}
+
+.arrows >img{
+    aspect-ratio: 1;
+    color:$black;
+    background-color: $white;
+    padding :0.9rem;
+    border-radius: 50%;
+}
+
+.product-infos{
+    padding-inline: 1.5rem;
+    display: grid;
+    gap:1rem;
+}
+
+.company-name{
+    font-family: 'Kumbh Regular';
+    font-size :0.8rem;
+    letter-spacing: 0.07rem;
+    font-weight: 900;
+    color : $primaryOrange;
+}
+
+.product-teaser{
+    font-family: 'Kumbh Bold';
+    font-size: 1.7rem;
+    font-weight: bolder;
+    line-height: 2.2rem;
+
+    color : $black;
+}
+
+.product-desc{
+    font-family: 'Kumbh Regular';
+    font-size: 0.9rem;
+    color : $darkGrayishBlue
+}
+
+.pricing{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.pricing>h5{
+    font-family: 'Kumbh Bold';
+    font-size: 1rem;
+    color:$grayishBlue;
+    text-decoration:line-through;
+}
+
+.original-price{
+    display: flex;
+    gap :1rem;
+    align-items: center;    
+
+
+}
+.original-price h4{
+    font-family: 'Kumbh Bold';
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color : $black;
+    height: fit-content;
+
+}
+
+.original-price h5{
+    font-family: 'Kumbh Bold';
+    font-size: 1rem;
+    color:$primaryOrange;
+    padding-inline : 0.5rem;
+    background-color:$secondaryOrange;
+    border-radius : 20%;
+    margin : 0;
+    height: fit-content;
+}
+
+.order-quantity{
+    display :flex;
+    justify-content: space-between;
+    background-color: $lightGrayishBlue;
+    border-radius : 0.7rem;
+    align-items: center;
+    padding-inline: 1.4rem;
+}
+.order-quantity input{
+    font-family: 'Kumbh Bold';
+    width : 20%;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    align-self: center;
+    border :none;
+    background-color: $lightGrayishBlue;
+    padding-block: 1rem;
+  
+}
+
+.order-quantity>img:first-child{
+    width : 0.8rem;
+    height: 0.3rem;
+}
+
+.order-quantity>img:last-child{
+    width : 0.8rem;
+    height: 0.7rem;
+}
+
+.add-cart{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap : 1.3rem;
+   padding-block: 1rem;
+   border: none;
+   background-color: $primaryOrange;
+   color : $white;
+   font-family: 'Kumbh Bold';
+   font-size: 0.9rem;
+   border-radius: 0.7rem;
+}
+
