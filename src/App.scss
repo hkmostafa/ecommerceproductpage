@@ -53,6 +53,7 @@ $black : hsl(0, 0%, 0%);
     gap : 1rem;
     flex-wrap : wrap;
     align-content: center;
+    cursor : pointer;
 }
 .icon-menu{
     height: 1rem;
@@ -69,19 +70,27 @@ $black : hsl(0, 0%, 0%);
 .avatar{
     height: 2rem;
 }
+
+.link {
+    display : none;
+}
 .container{
     display: grid;
     gap : 1.7rem;
+    grid-template-columns: 1;
 }
 
 .product-image{
-    background-image: url('images/image-product-1.jpg');
+   
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding-block:  40%;
 }
 
+.product-desktop{
+    display: none;
+}
 .arrows{
     display : flex;
     justify-content: space-between;
@@ -112,9 +121,9 @@ $black : hsl(0, 0%, 0%);
 
 .product-teaser{
     font-family: 'Kumbh Bold';
-    font-size: 1.7rem;
+    font-size: 2.1rem;
     font-weight: bolder;
-    line-height: 2.2rem;
+    line-height: 2.3rem;
 
     color : $black;
 }
@@ -186,8 +195,11 @@ $black : hsl(0, 0%, 0%);
 }
 
 .order-quantity>img:first-child{
-    width : 0.8rem;
+    width : 0.9rem;
     height: 0.3rem;
+
+    align-self: center;
+    justify-self: center;
 }
 
 .order-quantity>img:last-child{
@@ -207,5 +219,188 @@ $black : hsl(0, 0%, 0%);
    font-family: 'Kumbh Bold';
    font-size: 0.9rem;
    border-radius: 0.7rem;
+   cursor: pointer;
+   transition : all 200ms
+
 }
 
+.add-cart:hover{
+    color: $primaryOrange;
+    background-color: $lightGrayishBlue;
+
+}
+
+.cart-popup{
+    visibility: hidden;
+    position : absolute;
+    background-color: white;
+    display : grid;
+    gap : 1.5rem;
+    padding :1.5rem;
+    top : 6rem;
+    right : 7rem;
+    transform: translateY(-200%);
+    transition: all 400ms ease-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cart-popup> h5{
+
+    font-family : 'Kumbh Regular';
+    border-bottom : solid 1px $grayishBlue ;
+    padding-bottom: 1.3rem;
+}
+
+.cart-popup button{
+    padding-inline : 7rem;
+}
+.cart-productdetails{
+    display : grid ;
+    grid-template-columns: 20% auto 8%;
+    gap :1rem;
+    align-items: center;
+}
+.cart-productdetails img{
+    border-radius : 0.5rem
+}
+.details-text{
+    color : $darkGrayishBlue;
+    font-family: 'Kumbh Regular';
+  
+}
+
+.cart-popup[data-visible="true"]{
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+
+
+@media(min-width : 1200px){
+    .App{
+        padding-inline : 10%;
+
+    }
+    .amount-button:first-child{
+        align-self: center;
+        padding-inline : 5px;
+        padding-block : 4px;
+        cursor : pointer;
+    }
+    
+    .navBar{
+        border-bottom : solid 1px $grayishBlue;
+        margin-bottom : 4rem;
+        padding-inline : 0;
+        padding-block : 2rem;
+    }
+    .navBar> * {
+     
+        gap : 3rem;
+      
+    } 
+    
+    .icon-menu{
+        display : none
+    }
+    .avatar{
+        height: 3rem;
+    }
+    .link {
+        display : block;
+        font-family : 'Kumbh Regular';
+        color : $darkGrayishBlue;
+        font-size : 1rem;
+        transition: color 250ms;
+    }
+    .link:hover{
+        color : $primaryOrange;
+
+    }
+    .product-desktop{
+        display : grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+        gap : 7%;
+        
+    }
+    .product-desktop>img{
+        border-radius: 0.5rem;
+    }
+
+    .product-desktop>img:active{
+        border : solid 2px $primaryOrange;
+        filter: opacity(30%);
+
+    }
+
+    .arrows{
+        display: none;
+    }
+    .product-image{
+        padding-block:  50%;
+        border-radius : 1rem;
+       
+    }
+    .container{
+        padding-inline: 2rem;
+        grid-template-columns: 40% auto;
+        gap :6rem;
+        align-items:flex-start;
+    }
+    .image-container{
+        align-self: center;
+        display : grid;
+        gap:2rem;
+    }
+    .product-infos{
+        padding-block : 4rem;
+        padding-inline-end: 0;
+        gap : 1.7rem;
+    }
+    .company-name{
+        font-size: 1.3rem;
+    }
+    .product-teaser{
+        font-size : 3rem;
+        line-height:  3rem;
+        margin-bottom : 2rem;
+    }
+
+  
+    .pricing{
+        display: grid;
+    }
+    .order{
+        display : grid;
+        grid-template-columns: 35% auto;
+        gap : 1rem;
+ 
+    }
+
+    .order-quantity{
+     
+        height: fit-content;
+
+        padding-block : 1rem;
+        padding-inline: 1.4rem;
+    }
+
+    .order-quantity input{
+       
+        width : 50%;
+        padding-left: 1rem;
+        font-size: 1rem;
+        padding-block: 0;
+       
+      
+    }
+    .add-cart{
+        height : fit-content;
+        padding-block: 1rem;
+      
+     }    
+     
+
+}
+    
+  
